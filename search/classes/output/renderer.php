@@ -88,6 +88,7 @@ class renderer extends \plugin_renderer_base {
         $docdata['content'] = $docdata['content'] ? shorten_text($docdata['content'], static::SEARCH_RESULT_TEXT_SIZE, true) : '';
         $docdata['description1'] = $docdata['description1'] ? shorten_text($docdata['description1'], static::SEARCH_RESULT_TEXT_SIZE, true) : '';
         $docdata['description2'] = $docdata['description2'] ? shorten_text($docdata['description2'], static::SEARCH_RESULT_TEXT_SIZE, true) : '';
+        $docdata['modified'] = $docdata['modified'];
 
         return $this->output->render_from_template('core_search/result', $docdata);
     }

@@ -31,6 +31,7 @@
     * title
     * docurl
     * contexturl
+    * modified
 
     Optional context variables for this template:
     * content
@@ -49,6 +50,7 @@
         "contexturl": "https://example.com/mod/example/view.php?id=2"
         "userurl": "https://example.com/user/profile.php?id=3",
         "userfullname": "Example User Full Name",
+        "modified": "Last modified time",
     }
 }}
 <div class="result">
@@ -71,4 +73,7 @@
             - <a href="{{{userurl}}}">{{#str}}byname, moodle, {{userfullname}}{{/str}}</a>
         {{/userfullname}}
     </div>
+    {{#modified}}
+        <div class="result-content">Last modified on {{{modified}}}</div>
+    {{/modified}}
 </div>
